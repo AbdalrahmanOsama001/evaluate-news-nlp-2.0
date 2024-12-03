@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config(); 
+require('dotenv').config(); // Load environment variables from .env file
 const fetch = require('node-fetch'); // Import node-fetch to make API requests
 
 const app = express();
@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
 
 // API endpoint for analyzing the article
 app.post('/api/analyze', async (req, res) => {
-    const { url } = req.body; 
-    const apiKey = process.env.API_KEY; 
+    const { url } = req.body; // Get the URL from the request body
+    const apiKey = process.env.API_KEY; // Get the API key from environment variables
     const apiUrl = `https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${url}&lang=en`;
 
     try {
