@@ -18,7 +18,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "sass-loader": "^16.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
